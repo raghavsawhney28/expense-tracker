@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
+
+
+
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
-  const today = new Date().toISOString().split("T")[0];
+
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -15,9 +18,9 @@ const ExpenseForm = (props) => {
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
   };
-  const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
-  };
+//   const dateChangeHandler = (event) => {
+//     setEnteredDate(event.target.value);
+//   };
 
   const submitHandler = (event) => {
     event.preventDefault();
